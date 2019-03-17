@@ -511,6 +511,7 @@ section.menu .masthead h2 {
 }
 
 h2 {
+  color: black;
   text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
   letter-spacing: 0.05em;
 }
