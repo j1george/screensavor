@@ -78,7 +78,7 @@ section h2 {
   line-height: 3.1rem;
 }
 
-/* #mainNav {
+#mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-weight: 700;
@@ -106,16 +106,12 @@ section h2 {
   color: #000;
 }
 
-#mainNav .navbar-nav li.nav-item a.nav-link.active {
-  color: #fefefe;
-}
-
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.8rem;
-} */
+}
 
-/* @media (min-width: 992px) { */
+@media (min-width: 992px) {
   #mainNav {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -145,7 +141,7 @@ section h2 {
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.5em;
   }
-/* } */
+}
 
 header.masthead {
   height: 66vh;
