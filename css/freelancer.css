@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
  */
 
-body {
+ body {
   font-family: 'Open Sans', sans-serif;
   font-weight:600;
 }
@@ -106,6 +106,10 @@ section h2 {
   color: #000;
 }
 
+#mainNav .navbar-nav li.nav-item a.nav-link.active {
+  color: #fefefe;
+}
+
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.8rem;
@@ -182,7 +186,7 @@ header.masthead h2 {
 section.artgallery div.masthead {
   height: 66vh;
   min-height: 300px;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/large_31946114_520984427813_2952664001659535360_o.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('../img/large_31946114_520984427813_2952664001659535360_o.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -193,7 +197,7 @@ section.artgallery div.masthead {
 section.menu div.masthead {
   height: 66vh;
   min-height: 300px;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/large_31959538_520987676303_6535118969399934976_o.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('../img/large_31959538_520987676303_6535118969399934976_o.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -504,4 +508,9 @@ section.menu .masthead h2 {
   overflow: hidden;
   position: fixed;
   opacity: 1.0;
+}
+
+h2 {
+  text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
+  letter-spacing: 0.05em;
 }
