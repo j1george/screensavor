@@ -23,6 +23,54 @@
 
   <!-- Custom styles for this template -->
   <link href="css/freelancer.css" rel="stylesheet">
+
+
+  <script type="text/javascript">
+    // place your images in this array
+    var random_images_array = [
+      'cabin.png', 'cake.png', 'circus.png', 'game.png', 'safe.png', 'submarine.png'
+      ];
+    function getRandomImages(imgAr, path) {
+      function shuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+
+          // Pick a remaining element...
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+
+          // And swap it with the current element.
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+      }
+
+      imgAr = shuffle(imgAr);
+
+      for(var i = 0; i <imgAr.length; i++) {
+        var img = imgAr[ i ];
+        getRandomImage(img, path);
+      }
+    }
+    function getRandomImage(img, path) {
+        path = path || 'img/artgallery'; // default path here
+        var imgStr = '<div class="col-md-6 col-lg-4">'+
+          '<a class="artgallery-item d-block mx-auto" href="'+path+img+'">'+
+            '<div class="artgallery-item-caption d-flex position-absolute h-100 w-100">'+
+              '<div class="artgallery-item-caption-content my-auto w-100 text-center">'+
+                '<i class="fas fa-search-plus fa-3x"></i>'+
+              '</div>'+
+            '</div>'+'<img class="img-fluid" src="' + path + img + '" alt = "">'+
+          '</a>'+
+        '</div>';
+        document.write(imgStr); document.close();
+    }
+  </script>
 </head>
 
 <body>
@@ -35,16 +83,16 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item mx-0 mx-lg-1">
+          <li class="nav-item mx-0 mx-lg-1 text-right">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#artgallery">Art</a>
           </li>
-          <li class="nav-item mx-0 mx-lg-1">
+          <li class="nav-item mx-0 mx-lg-1 text-right">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#menu">Menu</a>
           </li>
-          <li class="nav-item mx-0 mx-lg-1">
+          <li class="nav-item mx-0 mx-lg-1 text-right">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#location">Location</a>
           </li>
-          <li class="nav-item mx-0 mx-lg-1">
+          <li class="nav-item mx-0 mx-lg-1 text-right">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#socials">Socials</a>
           </li>
         </ul>
@@ -82,66 +130,7 @@
       <br/>
 
       <div class="row gallery">
-        <div class="col-md-6 col-lg-4 gallery-link">
-          <a class="artgallery-item d-block mx-auto" href="img/artgallery/cabin.png">
-            <div class="artgallery-item-caption d-flex position-absolute h-100 w-100">
-              <div class="artgallery-item-caption-content my-auto w-100 text-center">
-                <i class="fas fa-search-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/artgallery/cabin.png" alt="">
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a class="artgallery-item d-block mx-auto" href="img/artgallery/cake.png">
-            <div class="artgallery-item-caption d-flex position-absolute h-100 w-100">
-              <div class="artgallery-item-caption-content my-auto w-100 text-center">
-                <i class="fas fa-search-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/artgallery/cake.png" alt="">
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a class="artgallery-item d-block mx-auto" href="img/artgallery/circus.png">
-            <div class="artgallery-item-caption d-flex position-absolute h-100 w-100">
-              <div class="artgallery-item-caption-content my-auto w-100 text-center">
-                <i class="fas fa-search-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/artgallery/circus.png" alt="">
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a class="artgallery-item d-block mx-auto" href="img/artgallery/game.png">
-            <div class="artgallery-item-caption d-flex position-absolute h-100 w-100">
-              <div class="artgallery-item-caption-content my-auto w-100 text-center">
-                <i class="fas fa-search-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/artgallery/game.png" alt="">
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a class="artgallery-item d-block mx-auto" href="img/artgallery/safe.png">
-            <div class="artgallery-item-caption d-flex position-absolute h-100 w-100">
-              <div class="artgallery-item-caption-content my-auto w-100 text-center">
-                <i class="fas fa-search-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/artgallery/safe.png" alt="">
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a class="artgallery-item d-block mx-auto" href="img/artgallery/submarine.png">
-            <div class="artgallery-item-caption d-flex position-absolute h-100 w-100">
-              <div class="artgallery-item-caption-content my-auto w-100 text-center">
-                <i class="fas fa-search-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/artgallery/submarine.png" alt="">
-          </a>
-        </div>
+        <script type="text/javascript">getRandomImages(random_images_array, 'img/artgallery/')</script>
       </div>
     </div>
   </section>
@@ -262,6 +251,8 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/freelancer.js"></script>
+
+
 
 </body>
 
